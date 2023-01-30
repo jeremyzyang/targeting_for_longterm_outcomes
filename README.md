@@ -34,7 +34,7 @@ Output data: difference in policy values.
 
 5. Estimating treatment effects 
 
-This is not part of the policy optimization pipeline. It produces results in Figure D.3-D.8 and Table D.4.
+This is not part of the policy learning pipeline. It produces results in Figure D.3-D.8 and Table D.4.
 
 Input data: observed churn and revenue, and covariates for users in the two experiments.
 Output data: estimated treatment effects.
