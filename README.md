@@ -1,8 +1,8 @@
 # targeting_for_longterm_outcomes
 
-The code contains five Jupyter Notebooks that each performs a main subtask. 
+The code contains four Jupyter Notebooks that each performs a main subtask. 
 
-The analysis is organized in four steps: 1) imputing surrogate index, 2) using cross-fitting to estimate an outcome model for surrogate index, 3) constructing doubly-robust scores with the outcome model and optimizing policy with doubly-robust scores, 4) evaluating policy with a doubly-robust estimator. Main results reported in the paper are shown. See the description of each file below.
+The analysis is organized in three steps: 1) imputing surrogate index, 2) using cross-fitting to estimate an outcome model for surrogate index, 3) constructing doubly-robust scores with the outcome model and optimizing and evaluating policy with doubly-robust scores. Main results reported in the paper are shown. See the description of each file below.
 
 1. Imputing surrogate index
 
@@ -18,21 +18,14 @@ The second step uses cross-fitting to estimate an outcome model for surrogate in
 Input data: surrogate index and covariates for users in the two experiments. 
 Output data: predicted outcome under each potential treatment condition for users in the two experiments.
 
-3. Constructing doubly-robust scores with the outcome model and optimizing policy with doubly-robust scores
+3. Constructing doubly-robust scores with the outcome model and optimizing and evaluating policy with doubly-robust scores
 
-The third step uses surrogate index and predicted outcomes to construct doubly-robust scores and then use the doubly-robust scores to optimize policy. It produces results in Table 1.
+The third step uses surrogate index and predicted outcomes to construct doubly-robust scores and then use the doubly-robust scores to optimize and evaluate policy. It produces results in Table 1 and Figure 3.
 
 Input data: surrogate index, covariates, and predicted outcomes for users in the two experiments. 
-Output data: optimized policy and optimal actions for users in the two experiments. 
+Output data: optimized policy and optimal actions for users in the two experiments, difference in policy values.
 
-4. Evaluating policy with a doubly-robust estimator
-
-The forth step compares the performance of different policies. It produces results in Figure 3. 
-
-Input data: surrogate index, covariates, and predicted outcomes for users in the two experiments, optimized policy.
-Output data: difference in policy values.
-
-5. Estimating treatment effects 
+4. Estimating treatment effects 
 
 This is not part of the policy learning pipeline. It produces results in Figure D.3-D.8 and Table D.4.
 
