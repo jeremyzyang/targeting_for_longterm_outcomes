@@ -1,8 +1,8 @@
 # targeting_for_longterm_outcomes
 
-The code contains four Jupyter Notebooks that each performs a main subtask. 
+The code contains five Jupyter Notebooks that each performs a main subtask. The first four notebooks reproduce the main results in the paper with the original data and the fifth notebook generates synthetic data that preserves the joint distribution in the original data.
 
-The analysis is organized in three steps: 1) imputing surrogate index, 2) using cross-fitting to estimate an outcome model for surrogate index, 3) constructing doubly-robust scores with the outcome model and optimizing and evaluating policy with doubly-robust scores. Main results reported in the paper are shown. See the description of each file below.
+The analysis that reproduces the main results in the paper is organized in three steps: 1) imputing surrogate index, 2) using cross-fitting to estimate an outcome model for surrogate index, 3) constructing doubly-robust scores with the outcome model and optimizing and evaluating policy with doubly-robust scores. See the description of each file below.
 
 1. Imputing surrogate index
 
@@ -31,3 +31,10 @@ This is not part of the policy learning pipeline. It produces results in Figure 
 
 Input data: observed churn and revenue, and covariates for users in the two experiments.
 Output data: estimated treatment effects.
+
+5. Generating synthetic data 
+
+This is not part of the policy learning pipeline. It generates synthetic data that preserves the joint distribution of the original data. 
+
+Input data: original data.
+Output data: synthetic data. 
