@@ -1,6 +1,6 @@
 # targeting_for_longterm_outcomes
 
-The code contains five Jupyter Notebooks that each performs a main subtask. The first four notebooks reproduce the main results in the paper with the original data and the fifth notebook generates synthetic data that preserves the joint distribution in the original data.
+The code contains five Jupyter notebooks that each performs a main subtask. The first four notebooks reproduce the main results in the paper with the original data and the fifth notebook generates synthetic data that preserves the joint distribution in the original data.
 
 The analysis that reproduces the main results in the paper is organized in three steps: 1) imputing surrogate index, 2) using cross-fitting to estimate an outcome model for surrogate index, 3) constructing doubly-robust scores with the outcome model and optimizing and evaluating policy with doubly-robust scores. See the description of each file below.
 
