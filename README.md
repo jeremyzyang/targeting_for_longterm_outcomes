@@ -4,40 +4,40 @@ The code contains six Jupyter notebooks in R each performing a main subtask. The
 
 The analysis that reproduces the main results in the paper is organized into three steps: 1) imputing a surrogate index, 2) using cross-fitting to estimate an outcome model for the surrogate index, 3) constructing doubly-robust scores with the outcome model and optimizing and evaluating policy with doubly-robust scores. See the description of each file below.
 
-1. Imputing surrogate index
+1. Imputing surrogate index\
 The first step uses the surrogate index to predict long-term revenues.
 
-Input data: historical data on 18-month and 3-year revenue, covariates and surrogates; covariates and surrogates for users in the two experiments. 
+Input data: historical data on 18-month and 3-year revenue, covariates and surrogates; covariates and surrogates for users in the two experiments. \
 Output data: surrogate index for 18-month and 3-year revenue for users in the two experiments.
 
-2. Using cross-fitting to estimate an outcome model for a surrogate index
+2. Using cross-fitting to estimate an outcome model for a surrogate index\
 The second step uses cross-fitting to estimate an outcome model for the surrogate index.
 
-Input data: surrogate index and covariates for users in the two experiments. 
+Input data: surrogate index and covariates for users in the two experiments. \
 Output data: predicted outcome under each potential treatment condition for users in the two experiments.
 
-3. Constructing doubly-robust scores with the outcome model and optimizing and evaluating policy with doubly-robust scores
+3. Constructing doubly-robust scores with the outcome model and optimizing and evaluating policy with doubly-robust scores\
 The third step uses a surrogate index and predicted outcomes to construct doubly-robust scores and then use the doubly-robust scores to optimize and evaluate policy. It produces results in Table 1 and Figure 3.
 
-Input data: surrogate index, covariates, and predicted outcomes for users in the two experiments. 
+Input data: surrogate index, covariates, and predicted outcomes for users in the two experiments. \
 Output data: optimized policy and optimal actions for users in the two experiments, the difference in policy values.
 
-4. Estimating treatment effects
+4. Estimating treatment effects\
 This is not part of the policy learning pipeline. It produces results in Figure D.3-D.8 and Table D.4.
 
-Input data: observed churn, revenue, and user covariates in the two experiments. 
+Input data: observed churn, revenue, and user covariates in the two experiments. \
 Output data: estimated treatment effects.
 
-5. Generating synthetic data
+5. Generating synthetic data \
 This is not part of the policy learning pipeline. It generates synthetic data that preserves the joint distribution of the original data in the first experiment.
 
-Input data: original data. 
+Input data: original data. \
 Output data: synthetic data.
 
-6. Optimizing and evaluating policy on synthetic data
+6. Optimizing and evaluating policy on synthetic data \
 This is not part of the policy learning pipeline. It conducts policy optimization and evaluation of the synthetic data.
 
-Input data: synthetic data. 
+Input data: synthetic data. \
 Output data: optimized policy and difference in policy values.
 
 
