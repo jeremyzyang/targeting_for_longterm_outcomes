@@ -1,6 +1,6 @@
 # targeting_for_longterm_outcomes
 
-The code contains five Jupyter notebooks that each performs a main subtask. The first four notebooks reproduce the main results in the paper with the original data and the fifth notebook generates synthetic data that preserves the joint distribution of the original data.
+The code contains six Jupyter notebooks in R that each performs a main subtask. The first four notebooks reproduce the main results in the paper with the original data and the fifth and sixth notebook generate synthetic data that preserves the joint distribution of the original data and conduct analysis on the synthetic data.
 
 The analysis that reproduces the main results in the paper is organized in three steps: 1) imputing surrogate index, 2) using cross-fitting to estimate an outcome model for surrogate index, 3) constructing doubly-robust scores with the outcome model and optimizing and evaluating policy with doubly-robust scores. See the description of each file below.
 
@@ -34,7 +34,15 @@ Output data: estimated treatment effects.
 
 5. Generating synthetic data 
 
-This is not part of the policy learning pipeline. It generates synthetic data that preserves the joint distribution of the original data. 
+This is not part of the policy learning pipeline. It generates synthetic data that preserves the joint distribution of the original data in the first experiment. 
 
 Input data: original data.
 Output data: synthetic data. 
+
+6. Optimizing and evaluting policy on synthetic data
+
+This is not part of the policy learning pipeline. It conducts policy optimization and evalution on the synthetic data.
+
+Input data: synthetic data.
+Output data: optimized policy and difference in policy values.
+
