@@ -60,16 +60,16 @@ and 1 control condition in the second experiment.
 
 3. Surrogates
    
-Surrogate variables contain short-term revenues and when and what article section a user read after the treatment. Variables are named in the following way:
-- Revenue + 1m/2m/3m/4m/5m/6m. For instance, rev_3m is the 3-month revenue after the treatment.
+Surrogate variables contain short-term revenues and when and what article section a user reads after the treatment. Variables are named in the following way:
+- Revenue + 1m/2m/3m/4m/5m/6m. For instance, "rev_3m" is the 3-month revenue after the treatment.
 - Article section name + 1m/2m/3m/4m/5m/6m. Article section names are self-explanatory. For instance, “politics_1m” is the number of articles a user read in the politics section 1 month after the treatment.
 
 4. Outcomes
 
 - "Rev" is the observed revenue.
 - Rev_x is the surrogate index of long-term revenues computed with surrogates
-from the first x months.
-- Y0_x, Y1_x are outcomes predicted with the outcome model using surrogates
-from the first x months are the treatment.
+from the first x months. For instance, "rev_3" is the surrogate index of long-term revenue imputed with surrogates from the first 3 months.
+- Y0_x and Y1_x are outcomes predicted with the outcome model using surrogates
+from the first x months. For instance, "Y0_3" and "Y1_3" are the predicted outcomes without and with the treatment using surrogates from the first 3 months.
 
 
