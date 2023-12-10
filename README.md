@@ -51,6 +51,7 @@ The pre-treatment variables contain demographics (e.g., zip code), account activ
 - Article section name + last month/last 3 months/last 6 months. Article section names are self-explanatory. For instance, “politics_last_3month” is the number of articles a user read in the politics section in the last 3 months.
 
 2. Treatment
+   
 - “Treated” is a binary variable for treatment in the first experiment.
 - “Condition” is a categorical variable that encodes the name of the 6 treatments
 and 1 control condition in the second experiment.
@@ -58,12 +59,14 @@ and 1 control condition in the second experiment.
 - “P_treated” is the probability of a user receiving the treatment.
 
 3. Surrogates
+   
 Surrogate variables contain short-term revenues and when and what article section a user read after the treatment. Variables are named in the following way:
 - Revenue + 1m/2m/3m/4m/5m/6m. For instance, rev_3m is the 3-month revenue after the treatment.
 - Article section name + 1m/2m/3m/4m/5m/6m. Article section names are self-explanatory. For instance, “politics_1m” is the number of articles a user read in the politics section 1 month after the treatment.
 
 4. Outcomes
-- Rev is the observed revenue.
+
+- "Rev" is the observed revenue.
 - Rev_x is the surrogate index of long-term revenues computed with surrogates
 from the first x months.
 - Y0_x, Y1_x are outcomes predicted with the outcome model using surrogates
