@@ -40,4 +40,33 @@ This is not part of the policy learning pipeline. It conducts policy optimizatio
 Input data: synthetic data. \
 Output data: optimized policy and difference in policy values.
 
+Description of the data
+
+The variables can be divided into four categories.
+
+1. Pre-treatment covariates
+   
+The pre-treatment variables contain demographics (e.g., zip code), account activities (e.g., billing address change, credit card expiration date, complaints), and content consumption before the treatment (e.g., when and what article section they read). Variables are named in the following way:
+- Activity name + num/first/last. Activity names are self-explanatory. For instance, “billing_address_change_num” is the number of times that a user changed her billing address, “billing_address_change_first” is the first time a user changed her billing address, “billing_address_change_last” is the last time a user changed her billing address.
+- Article section name + last month/last 3 months/last 6 months. Article section names are self-explanatory. For instance, “politics_last_3month” is the number of articles a user read in the politics section in the last 3 months.
+
+2. Treatment
+- “Treated” is a binary variable for treatment in the first experiment.
+- “Condition” is a categorical variable that encodes the name of the 6 treatments
+and 1 control condition in the second experiment.
+- “Risk score” is the predicted churn probability of a user.
+- “P_treated” is the probability of a user receiving the treatment.
+
+3. Surrogates
+Surrogate variables contain short-term revenues and when and what article section a user read after the treatment. Variables are named in the following way:
+- Revenue + 1m/2m/3m/4m/5m/6m. For instance, rev_3m is the 3-month revenue after the treatment.
+- Article section name + 1m/2m/3m/4m/5m/6m. Article section names are self-explanatory. For instance, “politics_1m” is the number of articles a user read in the politics section 1 month after the treatment.
+
+4. Outcomes
+- Rev is the observed revenue.
+- Rev_x is the surrogate index of long-term revenues computed with surrogates
+from the first x months.
+- Y0_x, Y1_x are outcomes predicted with the outcome model using surrogates
+from the first x months are the treatment.
+
 
